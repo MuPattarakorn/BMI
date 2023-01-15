@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>โปรแกรมคำนวณ BMI</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link type="text/css" rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <center>
+        <h2>โปรแกรมคำนวณหาค่าดัชนีมวลกาย (Body Mass Index: BMI)
+            <img src="static/img/dumbbells.png">
+        </h2>
+
+        <div class="w3-container container">
+            <div class="w3-bar">
+                <button class="tab w3-bar-item tab-button tablink tab-pink" onclick="openBMI(event,'calBMI')">คำนวณค่า
+                    BMI</button>
+                <button class="tab w3-bar-item tab-button tablink" onclick="openBMI(event,'stdBMI')">เกณฑ์</button>
+            </div>
+
+            <div id="calBMI" class="w3-container w3-border BMI" style="padding-bottom:20px;">
+                <br>
+                <p>น้ำหนัก (kg.)</p>
+                <input id="weight" type="text">
+                <p>ส่วนสูง (cm.)</p>
+                <input id="height" type="text">
+                <br><br>
+                <button id="btn" class="button" onclick="getBMIProgram()">คำนวณ</button>
+                <br><br>
+                <span id="bmi"></span>
+            </div>
+
+            <div id="stdBMI" class="w3-container w3-border BMI">
+                <p class="bmi"><b>ค่าดัชนีมวลกาย (BMI)</b></p>
+                <p class="valueBMI">BMI น้อยกว่า 18.50:<span class="underweight"> น้ำหนักต่ำกว่าเกณฑ์/ผอม</span></p>
+                <p class="valueBMI">BMI ระหว่าง 18.50 - 22.90:<span class="normal"> น้ำหนักปกติ</span></p>
+                <p class="valueBMI">BMI ระหว่าง 23.00 - 24.90:<span class="plump"> น้ำหนักเกิน/ท้วม</span></p>
+                <p class="valueBMI">BMI ระหว่าง 25.00 - 29.90:<span class="overweight"> อ้วน</span></p>
+                <p class="valueBMI">BMI ระหว่าง 30.00 ขึ้นไป:<span class="obese"> อ้วนมาก</span></p>
+            </div>
+        </div>
+    </center>
+    <script src="app.js"></script>
+</body>
+
+</html>
